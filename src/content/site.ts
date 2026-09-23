@@ -328,7 +328,7 @@ export const projects: Project[] = [
       "The site is fully built out on the commerce side — collections, product pages, and checkout — and is currently pre-launch ahead of the brand's public rollout.",
     ],
     tech: ["Shopify", "Liquid", "JavaScript"],
-    draft: true,
+
   },
   {
     slug: "eco-essentials",
@@ -354,7 +354,7 @@ export const projects: Project[] = [
       "The storefront is complete and is currently pre-launch ahead of its public release.",
     ],
     tech: ["Shopify", "Liquid", "JavaScript"],
-    draft: true,
+
   },
   {
     slug: "event-platform",

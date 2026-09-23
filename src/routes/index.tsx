@@ -39,7 +39,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-
 const stack = [
   ["Frontend", "React.js", "Next.js", "Angular", "React Native"],
   ["Backend", "Node.js", ".NET"],
@@ -48,11 +47,27 @@ const stack = [
 ];
 
 const reasons = [
-  ["01", "Reliable by design", "Clear communication, considered architecture, and dependable delivery from first conversation to release."],
+  [
+    "01",
+    "Reliable by design",
+    "Clear communication, considered architecture, and dependable delivery from first conversation to release.",
+  ],
   ["02", "Versatile technology", "The right stack for the work—not a one-size-fits-all approach."],
-  ["03", "Cross-industry insight", "Practical experience across commerce, healthcare, CRM, and applied sciences."],
-  ["04", "Discretion built in", "Professional handling of confidential business logic, workflows, and client data."],
-  ["05", "International delivery", "Thoughtful collaboration across markets, cultures, and time zones."],
+  [
+    "03",
+    "Cross-industry insight",
+    "Practical experience across commerce, healthcare, CRM, and applied sciences.",
+  ],
+  [
+    "04",
+    "Discretion built in",
+    "Professional handling of confidential business logic, workflows, and client data.",
+  ],
+  [
+    "05",
+    "International delivery",
+    "Thoughtful collaboration across markets, cultures, and time zones.",
+  ],
 ];
 
 function Index() {
@@ -84,50 +99,111 @@ function Index() {
 
       <main id="top">
         <section className="relative flex min-h-[760px] items-end overflow-hidden pt-20 md:min-h-[92vh]">
-          <img src={heroImage} alt="Digital commerce and mobile application interfaces" width={1920} height={1088} className="absolute inset-0 size-full object-cover object-[66%_center]" />
+          <img
+            src={heroImage}
+            alt="Digital commerce and mobile application interfaces"
+            width={1920}
+            height={1088}
+            className="absolute inset-0 size-full object-cover object-[66%_center]"
+          />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--background)_0%,color-mix(in_oklab,var(--background)_96%,transparent)_35%,color-mix(in_oklab,var(--background)_35%,transparent)_72%,color-mix(in_oklab,var(--background)_50%,transparent)_100%)]" />
           <div className="grid-lines absolute inset-0 opacity-20" />
           <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 lg:px-8 lg:pb-24">
             <div className="animate-rise max-w-3xl">
-              <p className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase text-primary"><span className="h-px w-10 bg-primary" /> Full-stack web & app development</p>
-              <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] sm:text-6xl lg:text-8xl">Building digital experiences that scale.</h1>
-              <p className="mt-7 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">We design and develop high-performance commerce, mobile, and web applications for ambitious businesses across Europe and the Middle East.</p>
+              <p className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase text-primary">
+                <span className="h-px w-10 bg-primary" /> Full-stack web & app development
+              </p>
+              <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] sm:text-6xl lg:text-8xl">
+                Building digital experiences that scale.
+              </h1>
+              <p className="mt-7 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+                We design and develop high-performance commerce, mobile, and web applications for
+                ambitious businesses across Europe and the Middle East.
+              </p>
               <div className="mt-9 flex flex-wrap items-center gap-4">
-                <Button size="lg" asChild><a href="#contact">Discuss your project <ArrowRight /></a></Button>
-                <a href="#work" className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-foreground">Explore our work <ArrowDownRight className="size-4 text-primary" /></a>
+                <Button size="lg" asChild>
+                  <a href="#contact">
+                    Discuss your project <ArrowRight />
+                  </a>
+                </Button>
+                <a
+                  href="#work"
+                  className="inline-flex items-center gap-2 px-2 py-3 text-sm font-semibold text-foreground"
+                >
+                  Explore our work <ArrowDownRight className="size-4 text-primary" />
+                </a>
               </div>
             </div>
             <div className="mt-16 flex max-w-xl items-center gap-8 border-t border-line pt-6 text-xs text-muted-foreground">
-              <span>Chennai, India</span><span className="size-1 bg-primary" /><span>Delivering internationally</span>
+              <span>Chennai, India</span>
+              <span className="size-1 bg-primary" />
+              <span>Delivering internationally</span>
             </div>
           </div>
         </section>
 
         <section id="services" className="section-rule scroll-mt-20 py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <SectionHeading number="01" eyebrow="Capabilities" title="One studio. Complete digital delivery." text="From first architecture decisions to final production detail, we bring the full product stack together." />
+            <SectionHeading
+              number="01"
+              eyebrow="Capabilities"
+              title="One studio. Complete digital delivery."
+              text="From first architecture decisions to final production detail, we bring the full product stack together."
+            />
             <div className="mt-14 grid border-l border-t border-line sm:grid-cols-2 lg:grid-cols-4">
               {services.map(({ slug, icon: Icon, title, short }, index) => (
-                <Link key={slug} to="/services/$slug" params={{ slug }} className="group min-h-72 border-b border-r border-line bg-surface p-7 transition-colors hover:bg-surface-strong">
-                  <div className="flex items-start justify-between"><Icon className="size-6 text-primary" /><span className="text-xs text-muted-foreground">0{index + 1}</span></div>
+                <Link
+                  key={slug}
+                  to="/services/$slug"
+                  params={{ slug }}
+                  className="group min-h-72 border-b border-r border-line bg-surface p-7 transition-colors hover:bg-surface-strong"
+                >
+                  <div className="flex items-start justify-between">
+                    <Icon className="size-6 text-primary" />
+                    <span className="text-xs text-muted-foreground">0{index + 1}</span>
+                  </div>
                   <h3 className="mt-14 text-xl font-semibold">{title}</h3>
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">{short}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">View service <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></span>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                    View service{" "}
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </Link>
               ))}
             </div>
             <div className="mt-10">
-              <Button variant="outline" asChild><Link to="/services">See all services <ArrowRight /></Link></Button>
+              <Button variant="outline" asChild>
+                <Link to="/services">
+                  See all services <ArrowRight />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
 
         <section className="section-rule bg-surface py-16">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="mb-9 flex items-center gap-3"><Sparkles className="size-4 text-primary" /><p className="text-xs font-semibold uppercase text-muted-foreground">Technology stack</p></div>
+            <div className="mb-9 flex items-center gap-3">
+              <Sparkles className="size-4 text-primary" />
+              <p className="text-xs font-semibold uppercase text-muted-foreground">
+                Technology stack
+              </p>
+            </div>
             <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
               {stack.map(([category, ...items]) => (
-                <div key={category}><p className="mb-4 text-xs text-primary">{category}</p><div className="flex flex-wrap gap-2">{items.map((item) => <span key={item} className="border border-line bg-background px-3 py-2 text-sm font-medium">{item}</span>)}</div></div>
+                <div key={category}>
+                  <p className="mb-4 text-xs text-primary">{category}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {items.map((item) => (
+                      <span
+                        key={item}
+                        className="border border-line bg-background px-3 py-2 text-sm font-medium"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -135,28 +211,61 @@ function Index() {
 
         <section id="work" className="section-rule scroll-mt-20 py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <SectionHeading number="02" eyebrow="Selected work" title="Built for real-world momentum." text="A selection of mobile and commerce work. Client identities remain private by design." />
+            <SectionHeading
+              number="02"
+              eyebrow="Selected work"
+              title="Built for real-world momentum."
+              text="A selection of mobile and commerce work. Client identities remain private by design."
+            />
             <div className="mt-14 grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => <ProjectCard key={project.slug} project={project} />)}
+              {projects.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
             </div>
             <div className="mt-10">
-              <Button variant="outline" asChild><Link to="/projects">View all work <ArrowRight /></Link></Button>
+              <Button variant="outline" asChild>
+                <Link to="/projects">
+                  View all work <ArrowRight />
+                </Link>
+              </Button>
             </div>
             <div className="mt-10 grid items-center gap-8 border border-line bg-brand-soft p-7 md:grid-cols-[1fr_2fr] lg:p-10">
-              <div><p className="text-xs font-semibold uppercase text-primary">Industry experience</p><h3 className="mt-3 text-2xl font-semibold">Domain depth, handled discreetly.</h3></div>
-              <p className="text-sm leading-7 text-muted-foreground md:text-base">Our broader delivery experience includes CRM systems, healthcare and medical applications, and applied sciences platforms. We apply that domain understanding without exposing confidential client or product details.</p>
+              <div>
+                <p className="text-xs font-semibold uppercase text-primary">Industry experience</p>
+                <h3 className="mt-3 text-2xl font-semibold">Domain depth, handled discreetly.</h3>
+              </div>
+              <p className="text-sm leading-7 text-muted-foreground md:text-base">
+                Our broader delivery experience includes CRM systems, healthcare and medical
+                applications, and applied sciences platforms. We apply that domain understanding
+                without exposing confidential client or product details.
+              </p>
             </div>
           </div>
         </section>
 
         <section id="about" className="section-rule scroll-mt-20 bg-surface py-24 lg:py-32">
           <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.7fr_1.3fr] lg:px-8">
-            <div><p className="text-xs font-semibold uppercase text-primary">03 / About us</p><Globe2 className="mt-10 size-16 stroke-1 text-muted-foreground" /></div>
             <div>
-              <h2 className="max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl">Technical breadth.<br /><span className="text-muted-foreground">Business-minded execution.</span></h2>
-              <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">Technologics is a full-stack development studio creating dependable digital products across e-commerce, mobile applications, modern web platforms, CRM systems, and secure authentication. We combine thoughtful product decisions with deep implementation capability, giving clients one focused partner from concept through launch and continued growth.</p>
+              <p className="text-xs font-semibold uppercase text-primary">03 / About us</p>
+              <Globe2 className="mt-10 size-16 stroke-1 text-muted-foreground" />
+            </div>
+            <div>
+              <h2 className="max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl">
+                Technical breadth.
+                <br />
+                <span className="text-muted-foreground">Business-minded execution.</span>
+              </h2>
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-muted-foreground">
+                Technologics is a full-stack development studio creating dependable digital products
+                across e-commerce, mobile applications, modern web platforms, CRM systems, and
+                secure authentication. We combine thoughtful product decisions with deep
+                implementation capability, giving clients one focused partner from concept through
+                launch and continued growth.
+              </p>
               <div className="mt-12 grid gap-5 border-t border-line pt-8 sm:grid-cols-3">
-                <Metric value="Full-stack" label="End-to-end capability" /><Metric value="Cross-market" label="International delivery" /><Metric value="Security-first" label="Responsible engineering" />
+                <Metric value="Full-stack" label="End-to-end capability" />
+                <Metric value="Cross-market" label="International delivery" />
+                <Metric value="Security-first" label="Responsible engineering" />
               </div>
             </div>
           </div>
@@ -164,11 +273,20 @@ function Index() {
 
         <section className="section-rule py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <SectionHeading number="04" eyebrow="Why Technologics" title="A capable partner for complex work." />
+            <SectionHeading
+              number="04"
+              eyebrow="Why Technologics"
+              title="A capable partner for complex work."
+            />
             <div className="mt-14 border-t border-line">
               {reasons.map(([number, title, text]) => (
-                <div key={number} className="grid gap-4 border-b border-line py-8 sm:grid-cols-[80px_1fr_1.5fr] sm:items-center">
-                  <span className="text-xs text-primary">{number}</span><h3 className="text-xl font-semibold">{title}</h3><p className="text-sm leading-6 text-muted-foreground">{text}</p>
+                <div
+                  key={number}
+                  className="grid gap-4 border-b border-line py-8 sm:grid-cols-[80px_1fr_1.5fr] sm:items-center"
+                >
+                  <span className="text-xs text-primary">{number}</span>
+                  <h3 className="text-xl font-semibold">{title}</h3>
+                  <p className="text-sm leading-6 text-muted-foreground">{text}</p>
                 </div>
               ))}
             </div>
@@ -179,30 +297,87 @@ function Index() {
           <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-2 lg:px-8">
             <div>
               <p className="text-xs font-semibold uppercase text-primary">05 / Contact</p>
-              <h2 className="mt-7 max-w-xl text-4xl font-semibold leading-tight sm:text-6xl">Let’s build what’s next.</h2>
-              <p className="mt-6 max-w-md leading-7 text-muted-foreground">Tell us what you’re planning. We’ll respond with clear next steps and a focused path forward.</p>
+              <h2 className="mt-7 max-w-xl text-4xl font-semibold leading-tight sm:text-6xl">
+                Let’s build what’s next.
+              </h2>
+              <p className="mt-6 max-w-md leading-7 text-muted-foreground">
+                Tell us what you’re planning. We’ll respond with clear next steps and a focused path
+                forward.
+              </p>
               <div className="mt-12 grid gap-6 text-sm">
                 <ContactLine icon={MapPin} label="Location" value="Chennai, India" />
-                <ContactLine icon={Phone} label="Primary phone" value="Add your number" placeholder />
-                <ContactLine icon={Phone} label="Alternate phone" value="Add alternate number" placeholder />
-                <ContactLine icon={Mail} label="Email" value="technologics@gmail.com" placeholder />
+                <ContactLine icon={Phone} label="Primary phone" value="+91 9566311969" />
+                <ContactLine icon={Phone} label="Alternate phone" value="+91 9025211419" />
+                <ContactLine icon={Mail} label="Email" value="technologics.work@gmail.com" />
               </div>
             </div>
             <form onSubmit={submitForm} className="border border-line bg-background p-6 sm:p-9">
-              <div className="mb-8 flex items-center justify-between"><h3 className="text-xl font-semibold">Project enquiry</h3><span className="size-2 bg-primary" /></div>
-              <input type="hidden" name="_subject" value="New project enquiry — Technologics website" />
-              <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
-              <label className="text-xs font-semibold text-muted-foreground" htmlFor="name">Name</label>
-              <Input id="name" name="name" required className="mb-6 mt-2 h-12 bg-surface" placeholder="Your name" />
-              <label className="text-xs font-semibold text-muted-foreground" htmlFor="email">Email</label>
-              <Input id="email" name="email" type="email" required className="mb-6 mt-2 h-12 bg-surface" placeholder="you@company.com" />
-              <label className="text-xs font-semibold text-muted-foreground" htmlFor="message">Message</label>
-              <Textarea id="message" name="message" required className="mt-2 min-h-36 resize-none bg-surface" placeholder="Tell us about your project, goals, and timeline." />
-              <Button type="submit" size="lg" className="mt-6 w-full" disabled={status === "sending"}>
+              <div className="mb-8 flex items-center justify-between">
+                <h3 className="text-xl font-semibold">Project enquiry</h3>
+                <span className="size-2 bg-primary" />
+              </div>
+              <input
+                type="hidden"
+                name="_subject"
+                value="New project enquiry — Technologics website"
+              />
+              <input
+                type="text"
+                name="_honey"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+              <label className="text-xs font-semibold text-muted-foreground" htmlFor="name">
+                Name
+              </label>
+              <Input
+                id="name"
+                name="name"
+                required
+                className="mb-6 mt-2 h-12 bg-surface"
+                placeholder="Your name"
+              />
+              <label className="text-xs font-semibold text-muted-foreground" htmlFor="email">
+                Email
+              </label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="mb-6 mt-2 h-12 bg-surface"
+                placeholder="you@company.com"
+              />
+              <label className="text-xs font-semibold text-muted-foreground" htmlFor="message">
+                Message
+              </label>
+              <Textarea
+                id="message"
+                name="message"
+                required
+                className="mt-2 min-h-36 resize-none bg-surface"
+                placeholder="Tell us about your project, goals, and timeline."
+              />
+              <Button
+                type="submit"
+                size="lg"
+                className="mt-6 w-full"
+                disabled={status === "sending"}
+              >
                 {status === "sending" ? "Sending…" : "Send enquiry"} <ArrowRight />
               </Button>
-              {status === "sent" && <p role="status" className="mt-5 flex items-center gap-2 text-sm text-primary"><CheckCircle2 className="size-4" /> Thank you. We'll be in touch shortly.</p>}
-              {status === "error" && <p role="alert" className="mt-5 flex items-center gap-2 text-sm text-destructive"><CircleAlert className="size-4" /> Something went wrong sending that — please email us directly instead.</p>}
+              {status === "sent" && (
+                <p role="status" className="mt-5 flex items-center gap-2 text-sm text-primary">
+                  <CheckCircle2 className="size-4" /> Thank you. We'll be in touch shortly.
+                </p>
+              )}
+              {status === "error" && (
+                <p role="alert" className="mt-5 flex items-center gap-2 text-sm text-destructive">
+                  <CircleAlert className="size-4" /> Something went wrong sending that — please
+                  email us directly instead.
+                </p>
+              )}
             </form>
           </div>
         </section>
@@ -213,14 +388,38 @@ function Index() {
   );
 }
 
-function SectionHeading({ number, eyebrow, title, text }: { number: string; eyebrow: string; title: string; text?: string }) {
-  return <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr]"><p className="text-xs font-semibold uppercase text-primary">{number} / {eyebrow}</p><div><h2 className="max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">{title}</h2>{text && <p className="mt-5 max-w-2xl leading-7 text-muted-foreground">{text}</p>}</div></div>;
+function SectionHeading({
+  number,
+  eyebrow,
+  title,
+  text,
+}: {
+  number: string;
+  eyebrow: string;
+  title: string;
+  text?: string;
+}) {
+  return (
+    <div className="grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
+      <p className="text-xs font-semibold uppercase text-primary">
+        {number} / {eyebrow}
+      </p>
+      <div>
+        <h2 className="max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">{title}</h2>
+        {text && <p className="mt-5 max-w-2xl leading-7 text-muted-foreground">{text}</p>}
+      </div>
+    </div>
+  );
 }
 
 function ProjectCard({ project }: { project: Project }) {
   const { slug, index, title, type, status, visual, icon, highlights } = project;
   return (
-    <Link to="/projects/$slug" params={{ slug }} className="group bg-background p-4 transition-colors hover:bg-surface">
+    <Link
+      to="/projects/$slug"
+      params={{ slug }}
+      className="group bg-background p-4 transition-colors hover:bg-surface"
+    >
       <div className="relative aspect-[4/3] overflow-hidden bg-surface-strong">
         {!project.image && <div className="grid-lines absolute inset-0 opacity-50" />}
         <div className="absolute inset-0 transition-transform duration-500 group-hover:-translate-y-1">
@@ -229,14 +428,23 @@ function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="flex items-start justify-between gap-4 px-2 pb-3 pt-6">
         <div>
-          <div className="flex items-center gap-3"><span className="text-xs text-muted-foreground">{index}</span><h3 className="text-xl font-semibold">{title}</h3></div>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-muted-foreground">{index}</span>
+            <h3 className="text-xl font-semibold">{title}</h3>
+          </div>
           <p className="mt-2 text-sm text-muted-foreground">{type}</p>
         </div>
-        {status && <span className="shrink-0 border border-primary/40 bg-brand-soft px-2 py-1 text-[10px] font-semibold uppercase text-primary">{status}</span>}
+        {status && (
+          <span className="shrink-0 border border-primary/40 bg-brand-soft px-2 py-1 text-[10px] font-semibold uppercase text-primary">
+            {status}
+          </span>
+        )}
       </div>
       <ul className="grid gap-1.5 px-2 pb-4">
         {highlights.slice(0, 4).map((item) => (
-          <li key={item} className="text-xs leading-5 text-muted-foreground">{item}</li>
+          <li key={item} className="text-xs leading-5 text-muted-foreground">
+            {item}
+          </li>
         ))}
       </ul>
     </Link>
@@ -244,9 +452,37 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 function Metric({ value, label }: { value: string; label: string }) {
-  return <div><p className="font-display text-lg font-semibold text-primary">{value}</p><p className="mt-1 text-xs text-muted-foreground">{label}</p></div>;
+  return (
+    <div>
+      <p className="font-display text-lg font-semibold text-primary">{value}</p>
+      <p className="mt-1 text-xs text-muted-foreground">{label}</p>
+    </div>
+  );
 }
 
-function ContactLine({ icon: Icon, label, value, placeholder }: { icon: typeof MapPin; label: string; value: string; placeholder?: boolean }) {
-  return <div className="flex items-start gap-4"><Icon className="mt-0.5 size-5 text-primary" /><div><p className="text-xs text-muted-foreground">{label}</p><p className="mt-1 font-medium">{value}{placeholder && <span className="ml-2 text-[10px] uppercase text-muted-foreground">Placeholder</span>}</p></div></div>;
+function ContactLine({
+  icon: Icon,
+  label,
+  value,
+  placeholder,
+}: {
+  icon: typeof MapPin;
+  label: string;
+  value: string;
+  placeholder?: boolean;
+}) {
+  return (
+    <div className="flex items-start gap-4">
+      <Icon className="mt-0.5 size-5 text-primary" />
+      <div>
+        <p className="text-xs text-muted-foreground">{label}</p>
+        <p className="mt-1 font-medium">
+          {value}
+          {placeholder && (
+            <span className="ml-2 text-[10px] uppercase text-muted-foreground">Placeholder</span>
+          )}
+        </p>
+      </div>
+    </div>
+  );
 }

@@ -16,7 +16,8 @@ export const Route = createFileRoute("/services/")({
       { property: "og:title", content: "Services — Technologics" },
       {
         property: "og:description",
-        content: "Full-stack development services for commerce, mobile, web, and business platforms.",
+        content:
+          "Full-stack development services for commerce, mobile, web, and business platforms.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -54,7 +55,10 @@ function ServicesPage() {
                   <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">{short}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {tech.slice(0, 4).map((item) => (
-                      <span key={item} className="border border-line px-2 py-1 text-xs text-muted-foreground">
+                      <span
+                        key={item}
+                        className="border border-line px-2 py-1 text-xs text-muted-foreground"
+                      >
                         {item}
                       </span>
                     ))}

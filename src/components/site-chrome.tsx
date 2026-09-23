@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Menu, X, Sparkles, type LucideIcon } from "lucide-react";
+import { ArrowRight, Menu, X, Sparkles, type LucideIcon, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/content/site";
 
@@ -60,7 +60,10 @@ export function SiteHeader() {
         </Button>
       </div>
       {menuOpen && (
-        <nav className="border-t border-line bg-background px-5 py-5 md:hidden" aria-label="Mobile navigation">
+        <nav
+          className="border-t border-line bg-background px-5 py-5 md:hidden"
+          aria-label="Mobile navigation"
+        >
           <div className="mx-auto grid max-w-7xl gap-4 text-base">
             {navItems.map((item) => (
               <Link
@@ -72,10 +75,20 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Link to="/" hash="about" onClick={() => setMenuOpen(false)} className="py-1 text-muted-foreground">
+            <Link
+              to="/"
+              hash="about"
+              onClick={() => setMenuOpen(false)}
+              className="py-1 text-muted-foreground"
+            >
               About
             </Link>
-            <Link to="/" hash="contact" onClick={() => setMenuOpen(false)} className="py-1 text-muted-foreground">
+            <Link
+              to="/"
+              hash="contact"
+              onClick={() => setMenuOpen(false)}
+              className="py-1 text-muted-foreground"
+            >
               Contact
             </Link>
           </div>
@@ -119,7 +132,25 @@ export function PageHero({
         <p className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase text-primary">
           <span className="h-px w-10 bg-primary" /> {eyebrow}
         </p>
-        <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">{title}</h1>
+        <h1 className="max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-6xl">
+          {title}
+          {/* {title == "Quillo" && (
+            <a href="https://quillo.co.in/" target="_blank" rel="noopener noreferrer">
+              quillo.co.in
+            </a>
+          )} */}
+        </h1>
+        {title == "Quillo" && (
+          <a
+            href="https://quillo.co.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 border border-line bg-brand-soft px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:border-primary hover:bg-primary/10"
+          >
+            quillo.co.in
+            <ExternalLink className="size-3.5" />
+          </a>
+        )}
         {text && <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">{text}</p>}
       </div>
     </section>
